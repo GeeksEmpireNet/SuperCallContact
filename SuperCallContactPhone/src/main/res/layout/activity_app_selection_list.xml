@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/wholeAuto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+    <ListView
+        android:id="@+id/listFav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@drawable/draw_divider"
+        android:dividerHeight="2dp"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="37dp"
+        android:listSelector="@color/trans_def"
+        android:paddingStart="9dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="30dp"
+        android:requiresFadingEdge="vertical"
+        android:saveEnabled="true"
+        android:scrollbarFadeDuration="270"
+        android:scrollbarSize="7dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar"
+        android:scrollbars="vertical"
+        android:smoothScrollbar="true"
+        android:verticalScrollbarPosition="left"/>
+
+    <LinearLayout
+        android:id="@+id/side_index"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@id/listFav"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="83dp"/>
+
+    <ImageView
+        android:id="@+id/confirm"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/ic_set_selector"/>
+
+    <RelativeLayout
+        android:id="@+id/loadingSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/loadLogo"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_launcher"/>
+
+        <ProgressBar
+            android:id="@+id/loadingProgressltr"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-15dp"
+            android:indeterminate="true"
+            android:indeterminateBehavior="cycle"/>
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:padding="7dp"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="25"
+            android:text="@string/app_name"
+            android:textColor="@color/darker"
+            android:textSize="43sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+</RelativeLayout>
